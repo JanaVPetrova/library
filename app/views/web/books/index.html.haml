@@ -1,0 +1,10 @@
+%table.table.table-hover
+  %tbody
+    - @books.each do |book|
+      %tr{ onclick: "return location.href = '#{book_path(book)}'"}
+        %td
+          %img{ src: book.image.thumb }
+        %td
+          = book.title
+          %br
+          = book.description

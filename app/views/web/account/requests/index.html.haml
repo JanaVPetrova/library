@@ -1,0 +1,8 @@
+%table.table.table-hover
+  %tbody
+    - @requests.each do |request|
+      %tr
+        %td= request.user.email
+        %td= request.book.title
+        %td= request.workflow_state
+        %td= link_to "Подтвердить", api_request_path(request, { request: { state_event: :confirm } }), method: :put, remote: true, format: :json, class: 'btn btn-primary'

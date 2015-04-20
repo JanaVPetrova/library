@@ -1,0 +1,15 @@
+.page-header
+  %h1= @book.title
+.row-fluid
+  .span4
+    - if @book.image.thumb
+      %p
+        = image_tag @book.image.thumb
+    - unless current_users_book?(@book)
+      .row-fluid
+        = link_to "Заказать", api_requests_path(params: {request: {book_id: @book.id}}), method: :post, remote: true, format: :json, class: 'btn btn-primary'
+  .span4
+    .row-fluid
+      = @book.title
+    .row-fluid
+      = @book.description

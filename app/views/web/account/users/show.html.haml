@@ -1,0 +1,13 @@
+.page-header
+  %h1
+    = @user.first_name
+    = @user.last_name
+.row-fluid
+  .span4
+    .row-fluid
+      %img{ src: @user.photo.thumb }
+  .span4
+    .row-fluid
+      = link_to "Мои заказы", account_requests_path
+      = link_to "Мои книги", account_books_path
+      = link_to "То, что я читаю/прочитал", account_readings_path

@@ -1,0 +1,8 @@
+.page-header
+  %h1= t('.title')
+
+= link_to "Новая книга", new_account_book_path, class: 'btn btn-primary'
+
+%table.table.table-hover
+  %tbody
+    = render @books

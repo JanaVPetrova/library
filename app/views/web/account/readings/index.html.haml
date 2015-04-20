@@ -1,0 +1,8 @@
+%table.table.table-hover
+  %tbody
+    - @readings.each do |reading|
+      %tr
+        %td= reading.book.title
+        %td= reading.workflow_state
+        %td= reading.progress
+        %td= link_to "Подтвердить", api_reading_path(reading, { reading: { state_event: :confirm } }), method: :put, remote: true, format: :json, class: 'btn btn-primary'

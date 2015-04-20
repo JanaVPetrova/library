@@ -1,0 +1,29 @@
+ru:
+  sign_out: "Sign Out"
+  all_books: "Все книги"
+  web:
+    account:
+      books:
+        index:
+          title: "Мои книги"
+        new:
+          title: "Создать книгу"
+        edit:
+          title:
+      requests:
+        index:
+          title:
+      teams:
+        edit:
+          title:  "Редактировать группу"
+        members:
+          index:
+            title: "Члены группы"
+          new:
+            title: "Добавить нового члена"
+      users:
+        show:
+          title: "Мой аккаунт"
+    users:
+      new:
+        title: "Регистрация"

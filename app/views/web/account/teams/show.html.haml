@@ -1,0 +1,14 @@
+.page-header
+  %h1= @team.title
+.row-fluid
+  .span4
+    - if @team.image.thumb
+      %p
+        = image_tag @team.image.thumb
+    .row-fluid
+      = link_to "Вступить", "#"
+  .span4
+    .row-fluid
+      = @team.title
+    .row-fluid
+      = @team.description
